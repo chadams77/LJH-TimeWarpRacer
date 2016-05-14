@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="scripts/lib/three.min.js"></script>
+        <script src="scripts/lib/jquery-1.11.3.min.js"></script>
+        <script src="scripts/lib/seedrandom.js"></script>
+        <script src="scripts/lib/deepcopy.min.js"></script>
+
+        <script src="scripts/game.js"></script>
+        
+        <title>Timewarp Racer</title>
+
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0px;
+                background-color: #000;
+            }
+            #hud {
+                font-size: 25px;
+                padding: 10px;
+                color: white;
+                background-color: transparent;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                z-index: 10;
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>JavaScript is required.</noscript>
+        <canvas id='3dview'></canvas>
+        <div id='hud'></div>
+        <script>
+            game();
+        </script>
+    </body>
+</html>
