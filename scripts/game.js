@@ -46,7 +46,7 @@ window.game = function() {
             w: window.innerWidth,
             h: window.innerHeight
         };
-        if (!lvp || lvp.w !== iewport.w || lvp.h !== viewport.h) {
+        if (!lvp || lvp.w !== viewport.w || lvp.h !== viewport.h) {
             renderer.setSize(viewport.w, viewport.h);
             cam.aspect = viewport.w / viewport.h;
             cam.updateProjectionMatrix();
@@ -132,6 +132,8 @@ window.game = function() {
         dt *= 0.65;
 
         window.requestAnimationFrame(render);
+
+        setViewport();
 
         cx += Math.cos(angle) * speed * dt*60;
         cy += Math.sin(angle) * speed * dt*60;
